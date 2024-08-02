@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InView Example</title>
+</head>
+<body>
+    <div class="inview-element">This element will be watched by InView.js</div>
+    
+    <!-- Include InView.js via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/in-view/0.6.1/in-view.min.js"></script>
+    <script>
+        // Your InView.js code here
+        inView('.inview-element')
+            .on('enter', el => {
+                el.style.backgroundColor = 'green';
+                console.log('Element has entered the viewport');
+            })
+            .on('exit', el => {
+                el.style.backgroundColor = 'red';
+                console.log('Element has left the viewport');
+            });
+    </script>
+</body>
+</html>
