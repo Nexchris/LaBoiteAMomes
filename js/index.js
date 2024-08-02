@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   
     .jtpl-section-main__inner, .jtpl-sidebar__inner {
-      max-width: max-content;
+     max-width: -webkit-fill-available;
     }
   
     .jtpl-footer__inner, .jtpl-section-main__inner, .jtpl-sidebar__inner {

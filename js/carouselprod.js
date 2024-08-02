@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const widgetContainer = document.querySelector('.productions-cinema');
+  const widgetContainer = document.querySelector('.carousel-prod');
 
   if (widgetContainer) {
     widgetContainer.innerHTML = `
