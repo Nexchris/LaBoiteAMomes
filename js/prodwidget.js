@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const widgetContainer = document.querySelector('.atelier-prod');
+    const widgetContainer = document.querySelector('.prod-widget');
   
     if (widgetContainer) {
       widgetContainer.innerHTML = `
@@ -107,17 +107,17 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             .main-wrapper{
-                width: auto;
-        margin-left: 1vw;
-        display: flex;
-        flex-wrap: wrap;
+                width: 23rem;
+               display: flex;
+               flex-wrap: wrap;
         align-content: flex-start;
-        justify-content: flex-start;
+        justify-content: center;
+        flex-direction: row;
             }
 
             .main-wrapper > div {
-                flex: 0 0 170px;
-    height: 250px;
+                flex: 0 0 150px;
+    height: 200px;
     border-radius: 0.5rem;
     transition: flex 0.5s ease-in-out, height 0.5s ease-in-out, transform 0.5s ease-in-out;
     cursor: pointer;
@@ -186,6 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </body>
 </html>
+
 
 
   `;
