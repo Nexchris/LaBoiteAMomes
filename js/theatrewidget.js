@@ -1,0 +1,203 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const widgetContainer = document.querySelector('.theatre-widget');
+  
+    if (widgetContainer) {
+      widgetContainer.innerHTML = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveau Titre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            font-family: system-ui;
+            font-weight: 400;
+        }
+
+        .main-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .main-wrapper > div {
+            flex: 0 0 200px;
+            height: 200px;
+            border-radius: 0.5rem;
+            transition: flex 0.5s ease-in-out, height 0.5s ease-in-out, transform 0.5s ease-in-out;
+            cursor: pointer;
+            box-shadow: 1px 5px 15px #3f3f3f;
+            position: relative;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .main-wrapper > div:nth-of-type(1) {
+            background: url("https://images2.imgbox.com/35/3d/QNjq3E2d_o.png") no-repeat 50% / cover;
+        }
+
+        .main-wrapper > div:nth-of-type(2) {
+            background: url("https://images2.imgbox.com/5f/58/1v3EbDPI_o.png") no-repeat 50% / cover;
+        }
+
+        .main-wrapper > div:nth-of-type(3) {
+            background: url("https://images2.imgbox.com/86/4b/JWeFoovw_o.png") no-repeat 50% / cover;
+        }
+
+        .main-wrapper > div:nth-of-type(4) {
+            background: url("https://images2.imgbox.com/a2/fd/RbFad7TX_o.png") no-repeat 50% / cover;
+        }
+
+        .main-wrapper > div:nth-of-type(5) {
+            background: url("https://images2.imgbox.com/6f/c2/D9PZbC2Z_o.jpg") no-repeat 50% / cover;
+        }
+
+        .info-box {
+            font-size: 1.5rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-end;
+            background: rgb(2, 2, 46);
+            background: linear-gradient(0deg, rgba(10, 10, 10, 0.676) 0%, rgba(107, 107, 107, 0) 100%);
+            transform: translateY(100%);
+            transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+            visibility: hidden;
+        }
+
+        .info-box span {
+            display: block;
+            margin-bottom: 2vh;
+            font-size: 1.2rem;
+        }
+
+        .info-box h2 {
+            margin-bottom: 0;
+        }
+
+        .main-wrapper > div:hover {
+            flex: 0 0 350px;
+            height: 500px;
+            box-shadow: 1px 3px 15px #ffffff;
+            transform: translateY(-30px);
+        }
+
+        .main-wrapper > div:hover .info-box {
+            opacity: 1;
+            transform: translateY(0%);
+            visibility: visible;
+        }
+
+        @media (min-width: 300px) and (max-width: 400px) {
+        .main-wrapper {
+            width: 35rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            justify-content: center;
+            flex-direction: row;
+        }
+    }
+
+    @media (min-width: 400px) and (max-width: 1200px) {
+        * {
+            margin-bottom: 2vh;
+        }
+
+        .main-wrapper {
+            width: 40rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .main-wrapper > div {
+            flex: 0 0 150px;
+            height: 200px;
+            border-radius: 0.5rem;
+            transition: flex 0.5s ease-in-out, height 0.5s ease-in-out, transform 0.5s ease-in-out;
+            cursor: pointer;
+            box-shadow: 1px 5px 15px #3f3f3f;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-wrapper > div:hover {
+            flex: 0 0 170px;
+            height: 250px;
+            box-shadow: 1px 3px 15px #ffffff;
+            transform: translateY(-30px);
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="custom-widget">
+        <div class="main-wrapper">
+            <div>
+                <a href="https://www.boitamomes.fr/productions/productions-cinema/la-rixe/">
+                    <div class="info-box">
+                        <h2>La Rixe</h2>
+                        <span>( 2024 )</span>
+                    </div>
+                </a>
+            </div>
+
+            <div>
+                <a href="https://www.boitamomes.fr/productions/productions-cinema/fausse-rumeur/">
+                    <div class="info-box">
+                        <h2>Fausses Rumeurs</h2>
+                        <span>( 2023 )</span>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.boitamomes.fr/productions/productions-cinema/sous-tension/">
+                    <div class="info-box">
+                        <h2>Sous Tension</h2>
+                        <span>( 2022 )</span>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.boitamomes.fr/productions/productions-cinema/happy-birthday/">
+                    <div class="info-box">
+                        <h2>Happy Birthday</h2>
+                        <span>( 2019 )</span>
+                    </div>
+                </a>
+            </div>
+
+            <div>
+                <a href="https://www.boitamomes.fr/productions/productions-cinema/un-jour-comme-un-autre-ou-presque/">
+                    <div class="info-box">
+                        <h2>Un Jour comme un autre... ou presque</h2>
+                        <span>( 2018 )</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+  `;
+    }
+  });
+  
